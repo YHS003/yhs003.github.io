@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yehya Hamdy Shehata</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo-img-container">
+                <img src="logo.png" alt="Code Logo" class="site-logo">
+            </a>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge">Computer & Control Engineering Graduate</span>
+                <h1>Yehya Hamdy Shehata</h1>
+                <div class="subtitle-container">
+                    <span class="subtitle-item">Cybersecurity (VAPT)</span>
+                    <span class="subtitle-divider">-</span>
+                    <span class="subtitle-item">IT Administrator</span>
+                    <span class="subtitle-divider">-</span>
+                    <span class="subtitle-item">Embedded Systems Background</span>
+                </div>
+                <p class="description">
+                    A fresh Computer & Control Engineering graduate bridging the gap between hardware foundations,
+                    system administration, and offensive security. Passionate about VAPT and network infrastructure,
+                    with a strong track record of hands-on technical execution in nationwide engineering competitions.
+                </p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <!-- Personal Profile Image -->
+            <div class="hero-image">
+                <div class="profile-img-box">
+                    <img src="profile.jpg" alt="Yehya Hamdy Shehata" class="profile-img">
+                </div>
+            </div>
+
+            <!-- Lightbox modal -->
+            <div class="image-lightbox-modal" id="imageLightbox">
+                <span class="lightbox-close">&times;</span>
+                <img class="lightbox-content" id="lightboxImg" alt="Yehya Hamdy Shehata Zoomed">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I am a fresh Computer & Control Engineering graduate from Suez Canal University (GPA: 3.16/4.0 -
+                        Very Good). I started my journey deep into Embedded Systems and transitioned into Cybersecurity
+                        (VAPT), while actively expanding my knowledge in IT Administration.
+                    </p>
+                    <p>
+                        I am also a passionate technical instructor, having successfully trained over 300 students in
+                        Linux fundamentals, Embedded systems, and C-Programming. I believe in strong
+                        foundations—understanding systems from the low-level silicon up to the network and web security
+                        layers.
+                    </p>
+                    <blockquote>
+                        Engineered the 1st Place winning hardware for AlzAware, and co-designed the 4th Place nationwide
+                        electric race car with SCU Racing.
+                    </blockquote>
+                </div>
+                <!-- Highlights -->
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <h3>300+</h3>
+                        <p>Students Trained (Linux, C, Network Basics)</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Top 15%</h3>
+                        <p>Global Rank on TryHackMe Labs</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>1st Place</h3>
+                        <p>Faculty Innovation Award (AlzAware)</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>4th Place</h3>
+                        <p>Nationwide EVER Electric Car Race</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+
+                <!-- 1. Systems & Networking (IT) -->
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <h3>Systems & Networking</h3>
+                    </div>
+                    <ul>
+                        <li><strong>Networking:</strong> TCP/IP, IPv4, Subnetting, VLANs, Routing & Switching, DHCP,
+                            DNS, NAT</li>
+                        <li><strong>Systems:</strong> Windows 10/11, Windows Server, Linux (Ubuntu/Debian),
+                            Troubleshooting</li>
+                        <li><strong>IT Tools:</strong> Cisco Packet Tracer, VMware Workstation, VirtualBox, Wireshark
+                        </li>
+                        <li><strong>Credentials:</strong> CCNA 200-301 (Full Curriculum Studied)</li>
+                    </ul>
+                </div>
+
+                <!-- 2. Cybersecurity (VAPT) -->
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Cybersecurity (VAPT)</h3>
+                    </div>
+                    <ul>
+                        <li><strong>VAPT:</strong> Web & Network Penetration Testing, Vulnerability Assessment, Network
+                            Security</li>
+                        <li><strong>Android Security:</strong> Static Analysis Basics & Dynamic Instrumentation using
+                            Frida</li>
+                        <li><strong>OWASP Top 10:</strong> Broken Authentication, Broken Access Control (IDOR), XSS,
+                            CSRF, Path Traversal</li>
+                        <li><strong>Security Tools:</strong> Kali Linux, Burp Suite, Nmap, Metasploit, Wireshark</li>
+                        <li><strong>Credentials:</strong> CEH & OSCP (Coursework), TryHackMe (Top 15% Globally), CompTIA
+                            Security+ (In Progress)</li>
+                    </ul>
+                </div>
+
+                <!-- 3. Software & Programming -->
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Software & Programming</h3>
+                    </div>
+                    <ul>
+                        <li><strong>Languages:</strong> C/C++, Python, Basic PHP & Laravel (for backend security
+                            auditing)</li>
+                        <li><strong>Foundations:</strong> Object-Oriented Programming (OOP), Data Structures &
+                            Algorithms (DSA)</li>
+                        <li><strong>Web Dev:</strong> HTML, CSS, JavaScript (Basic Frontend Logic)</li>
+                        <li><strong>Tools:</strong> Git, GitHub, Hardware Circuit Design & Integration</li>
+                    </ul>
+                </div>
+
+                <!-- 4. (Professional Soft Skills) -->
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="fa-solid fa-user-gear"></i>
+                        <h3>Professional Soft Skills</h3>
+                    </div>
+                    <ul>
+                        <li><strong>Instruction:</strong> Technical Mentorship & Instruction (Taught 300+ Students)</li>
+                        <li><strong>Collaboration:</strong> Teamwork, Cross-functional Collaboration, Technical
+                            Leadership</li>
+                        <li><strong>Cognitive:</strong> Analytical Troubleshooting, Deep Research, Problem Solving</li>
+                        <li><strong>Management:</strong> Initiative, Active Self-learning, Time Management</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="languages">
+        <div class="container">
+            <h2 class="section-title">Languages</h2>
+            <div class="languages-grid">
+                <div class="language-card">
+                    <div class="language-card-header">
+                        <i class="fa-solid fa-language"></i>
+                        <h3>Arabic</h3>
+                    </div>
+                    <span class="language-level">Native</span>
+                </div>
+                <div class="language-card">
+                    <div class="language-card-header">
+                        <i class="fa-solid fa-language"></i>
+                        <h3>English</h3>
+                    </div>
+                    <span class="language-level">Professional Working</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Leadership Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience & Leadership</h2>
+            <div class="experience-group">
+                <h3 class="experience-section-title">Professional Experience</h3>
+                <div class="experience-grid">
+                    <div class="experience-card">
+                        <div class="experience-card-header">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                            <h3>Digital Egypt Cubs Initiative (DECI)</h3>
+                        </div>
+                        <span class="experience-role">Backup Instructor</span>
+                        <p>
+                            Served as an official paid technical instructor delivering training as part of the national
+                            digital initiative.
+                        </p>
+                    </div>
+                    <div class="experience-card">
+                        <div class="experience-card-header">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <h3>Independent Linux Bootcamp</h3>
+                        </div>
+                        <span class="experience-role">Lead Instructor & Creator</span>
+                        <p>
+                            Independently created, marketed, and delivered multi-session paid professional Linux training
+                            workshops to international students, including attendees from outside Egypt.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-group">
+                <h3 class="experience-section-title">Leadership & Extracurricular Activities</h3>
+                <div class="experience-grid">
+                    <div class="experience-card">
+                        <div class="experience-card-header">
+                            <i class="fa-solid fa-gauge-high"></i>
+                            <h3>SCU Racing Team</h3>
+                        </div>
+                        <span class="experience-role">Head of Dashboard</span>
+                        <p>
+                            Achieved the highest performance rating among all team heads during the season. Served as a C
+                            Programming Instructor for both Beginner and Advanced C levels.
+                        </p>
+                    </div>
+                    <div class="experience-card">
+                        <div class="experience-card-header">
+                            <i class="fa-brands fa-linux"></i>
+                            <h3>IEEE</h3>
+                        </div>
+                        <span class="experience-role">Linux Instructor</span>
+                        <p>
+                            Started as a Member, then promoted to Linux Instructor in the following season. Delivered a Linux
+                            basics training session for over 200 people.
+                        </p>
+                    </div>
+                    <div class="experience-card">
+                        <div class="experience-card-header">
+                            <i class="fa-solid fa-users-gear"></i>
+                            <h3>Microsoft Student Club</h3>
+                        </div>
+                        <span class="experience-role">Technical Head</span>
+                        <p>
+                            Led AI, Frontend, Backend, and UI/UX teams. Built the cybersecurity team from scratch and led more
+                            than 300 members.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+
+                <!-- Project 1: AlzAware -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-tag">Graduation Project (Excellent)</span>
+                        <i class="fa-solid fa-brain project-icon"></i>
+                    </div>
+                    <h3>AlzAware – Smart AR Glasses for Alzheimer's</h3>
+                    <p>Solely responsible for the entire hardware architecture and execution. Engineered a low-latency
+                        hardware-software interface and optimized power consumption to boost battery life by 300%.
+                        Currently co-authoring a research paper on the project after winning 1st Place for Innovation.
+                    </p>
+                    <div class="project-tech">
+                        <span>Hardware Design</span>
+                        <span>Power Optimization</span>
+                        <span>Research Paper (In Progress)</span>
+                    </div>
+                    <div class="project-links" style="margin-top: 15px; display: flex; gap: 15px; font-size: 0.9rem;">
+                        <a href="https://www.linkedin.com/company/alzaware/" target="_blank" class="project-link-btn"><i
+                                class="fa-brands fa-linkedin"></i> LinkedIn Page</a>
+                        <a href="https://web.facebook.com/profile.php?id=61568938346519" target="_blank"
+                            class="project-link-btn"><i class="fa-brands fa-facebook"></i> Facebook Page</a>
+                    </div>
+                </div>
+
+                <!-- Project 2: EVER Electric Car -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-tag">SCU Racing Team</span>
+                        <i class="fa-solid fa-car-battery project-icon"></i>
+                    </div>
+                    <h3>EVER Electric Race Car</h3>
+                    <p>Collaborated with the Suez Canal University Racing Team to design and manufacture an electric
+                        racing car. Successfully secured 4th Place nationwide in Egypt's EVER (Electric Vehicle Ever)
+                        competition.</p>
+                    <div class="project-tech">
+                        <span>Electric Vehicles</span>
+                        <span>Hardware Prototyping</span>
+                        <span>Team Collaboration</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: Smart Home -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-tag">Wireless Networks</span>
+                        <i class="fa-solid fa-house-laptop project-icon"></i>
+                    </div>
+                    <h3>IoT Smart Home Network Layout</h3>
+                    <p>Designed a 3-floor smart home network with IoT-based remote monitoring and control. Configured
+                        Access Points for full wireless coverage and implemented VLAN segmentation with a dedicated DHCP
+                        server.</p>
+                    <div class="project-tech">
+                        <span>IoT Monitoring</span>
+                        <span>Wireless APs</span>
+                        <span>Network Segmentation</span>
+                    </div>
+                </div>
+
+                <!-- Project 4: Campus Network -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-tag">Network Engineering</span>
+                        <i class="fa-solid fa-building-shield project-icon"></i>
+                    </div>
+                    <h3>Secure Campus Network Design</h3>
+                    <p>Designed a multi-building campus network via Cisco Packet Tracer. Implemented VLAN segmentation,
+                        dynamic IP addressing (DHCP), and configured routing protocols for secure university core
+                        network connectivity.</p>
+                    <div class="project-tech">
+                        <span>Cisco Packet Tracer</span>
+                        <span>VLAN</span>
+                        <span>Routing & Switching</span>
+                    </div>
+                </div>
+
+                <!-- Project 5: Multi-Stage Amplifier -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-tag">Analog Electronics</span>
+                        <i class="fa-solid fa-wave-square project-icon"></i>
+                    </div>
+                    <h3>Multi-Stage Audio Amplifier</h3>
+                    <p>Designed a high-stability 3-stage BJT amplifier (BC547, 2N2222, D2058) achieving a gain of ~500.
+                        Implemented a Common Collector output buffer and passive heat-sink integration to prevent
+                        thermal overload and speaker load effects.</p>
+                    <div class="project-tech">
+                        <span>BJT Transistors</span>
+                        <span>Circuit Design</span>
+                        <span>Thermal Safety</span>
+                    </div>
+                </div>
+
+                <!-- Project 6: Library Management System -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-tag">Software Engineering</span>
+                        <i class="fa-solid fa-book-bookmark project-icon"></i>
+                    </div>
+                    <h3>Library Management System</h3>
+                    <p>Developed a modular C++ system leveraging a custom Doubly Linked List for bidirectional dataset
+                        traversal. Engineered flexible insertion/deletion algorithms, dynamic updates, and structured
+                        the codebase across 4 OOP classes.</p>
+                    <div class="project-tech">
+                        <span>C++</span>
+                        <span>Data Structures</span>
+                        <span>OOP Principles</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Professional Services</h2>
+            <div class="services-grid">
+
+                <!-- Service 1: VAPT & Security Auditing -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <i class="fa-solid fa-shield-halved service-icon"></i>
+                        <span class="service-badge">Offensive Security</span>
+                    </div>
+                    <h3>VAPT & Security Auditing</h3>
+                    <p>Providing comprehensive vulnerability assessments and penetration testing to identify, exploit,
+                        and remediate critical security flaws before malicious actors do.</p>
+
+                    <ul class="service-features">
+                        <li><i class="fa-regular fa-circle-check"></i> Web Application Penetration Testing (OWASP Top
+                            10)</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Android Mobile App Auditing & Reverse Engineering
+                        </li>
+                        <li><i class="fa-regular fa-circle-check"></i> API Security Testing & Network Vulnerability
+                            Assessment</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Detailed Technical Reports with Mitigation &
+                            Patching Guidance</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Technical Training & Instruction -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <i class="fa-solid fa-chalkboard-user service-icon"></i>
+                        <span class="service-badge">Instructional Leadership</span>
+                    </div>
+                    <h3>Technical Training & Instruction</h3>
+                    <p>Delivering high-impact, hands-on technical workshops and customized 1-on-1 mentorship sessions
+                        tailored for students and professionals looking to transition into IT.</p>
+
+                    <ul class="service-features">
+                        <li><i class="fa-regular fa-circle-check"></i> Linux Fundamentals & Command-Line Mastery (Bash
+                            Scripting)</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Web Security Labs & Defensive Coding Principles
+                        </li>
+                        <li><i class="fa-regular fa-circle-check"></i> Computer Networking Core Principles (CCNA Level)
+                        </li>
+                        <li><i class="fa-regular fa-circle-check"></i> Customized Bootcamps & Practical Lab-Based
+                            Learning</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="certifications-section">
+        <div class="container">
+            <!-- Section header (title only) -->
+            <div class="section-header">
+                <h2 class="section-title">Certifications & Achievements</h2>
+            </div>
+
+            <!-- Certifications grid -->
+            <div class="certs-grid">
+                <!-- Card 1 -->
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <span class="cert-badge">Professional Experience</span>
+                        <div class="cert-icon"><i class="fas fa-briefcase"></i></div>
+                    </div>
+                    <div class="cert-body">
+                        <h3>Cybersecurity & IT Intern</h3>
+                        <span class="cert-issuer">Future Interns Program</span>
+                        <p>Executed hands-on projects in Ethical Hacking, threat analysis, and network defense. Received
+                            formal recognition for performance excellence along with an official Letter of
+                            Recommendation (LoR).</p>
+                    </div>
+                    <div class="cert-links">
+                        <a href="https://drive.google.com/file/d/1hhkOAlnS2vle5BmpLKsTxDy1MxZwtZ2P/view?usp=drive_link"
+                            class="cert-link-btn"><i class="fas fa-file-pdf"></i> View Cert</a>
+                        <a href="https://drive.google.com/file/d/1v9JigHNKfZxXTOK7Jb20JR4o-fTPnapK/view?usp=drive_link"
+                            class="cert-link-btn"><i class="fas fa-envelope-open-text"></i> View LoR</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <span class="cert-badge gold-badge">Government Initiative</span>
+                        <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
+                    </div>
+                    <div class="cert-body">
+                        <h3>VAPT Specialist & Business English</h3>
+                        <span class="cert-issuer">Digital Egypt Pioneers Initiative (DEPI)</span>
+                        <p>Successfully completed the intensive 6-month Vulnerability Assessment and Penetration Testing
+                            (VAPT) track. Additionally awarded a specialized Business English credential for
+                            professional communication.</p>
+                    </div>
+                    <div class="cert-links">
+                        <a href="https://drive.google.com/file/d/1uXnfx-MKAgkSJE-zyighR0Z3_99ahMfg/view?usp=drive_link"
+                            class="cert-link-btn"><i class="fas fa-shield-alt"></i> VAPT Cert</a>
+                        <a href="https://drive.google.com/file/d/1NJGutZlZgar4ighdij_p36FzYgbjtllW/view?usp=drive_link"
+                            class="cert-link-btn gold-btn"><i class="fas fa-language"></i> English Cert</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <span class="cert-badge">Hands-on Training</span>
+                        <div class="cert-icon"><i class="fas fa-user-shield"></i></div>
+                    </div>
+                    <div class="cert-body">
+                        <h3>OSCP & CEH Practical Training</h3>
+                        <span class="cert-issuer">Teaching Planet</span>
+                        <p>Completed an intensive 6-month practical training program modeled after OSCP and CEH
+                            curricula, built a graduation-level project, and earned official certifications upon
+                            completion.</p>
+                    </div>
+                    <div class="cert-links">
+                        <a href="https://drive.google.com/file/d/1w8hYcmp3ZrmPjBJexT7PWWut5zLilaqq/view?usp=drive_link"
+                            class="cert-link-btn" style="flex: 1;"><i class="fas fa-external-link-alt"></i> View
+                            Certificate</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <span class="cert-badge gold-badge">Competition Award</span>
+                        <div class="cert-icon"><i class="fas fa-trophy"></i></div>
+                    </div>
+                    <div class="cert-body">
+                        <h3>EVER Competition - 4th Place</h3>
+                        <span class="cert-issuer">SCU Racing Team</span>
+                        <p>Participated with SCU Racing Team in the EVER challenge to manufacture an electric racing
+                            car, securing 4th place nationwide for the 2023-2024 season.</p>
+                    </div>
+                    <div class="cert-links">
+                        <a href="https://drive.google.com/file/d/1EDAouqOZvXxaFrLLxYLqO0OzGinrY3cY/view?usp=drive_link"
+                            class="cert-link-btn gold-btn" style="flex: 1;"><i class="fas fa-award"></i> View Award</a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <span class="cert-badge">Coursework</span>
+                        <div class="cert-icon"><i class="fab fa-java"></i></div>
+                    </div>
+                    <div class="cert-body">
+                        <h3>Introduction to Programming Using Java</h3>
+                        <span class="cert-issuer">Information Technology Institute (ITI)</span>
+                        <p>Completed a 160-hour course covering Java, Git, Object-Oriented Programming (OOP), and
+                            project development with practical software practices.</p>
+                    </div>
+                    <div class="cert-links">
+                        <a href="https://drive.google.com/file/d/1qHVitRz5ABqpraPqZFE0Xt_5IE7Vhipu/view?usp=drive_link"
+                            class="cert-link-btn" style="flex: 1;"><i class="fas fa-external-link-alt"></i> View
+                            Certificate</a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <span class="cert-badge gold-badge">University Award</span>
+                        <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    </div>
+                    <div class="cert-body">
+                        <h3>First Place Innovation Award</h3>
+                        <span class="cert-issuer">College Level Competition</span>
+                        <p>Secured first place in innovation at the College Science and Innovation Conference for the
+                            AlzAware graduation project, earning qualification for the university-level conference.</p>
+                    </div>
+                    <div class="cert-links">
+                        <a href="https://drive.google.com/file/d/1SaYA1bHPkAnCaSBE3l2E6P8CpyNqw2SV/view?usp=drive_link"
+                            class="cert-link-btn gold-btn" style="flex: 1;"><i class="fas fa-medal"></i> Award
+                            Details</a>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <span class="cert-badge">Digital Forensics</span>
+                        <div class="cert-icon"><i class="fas fa-search-dollar"></i></div>
+                    </div>
+                    <div class="cert-body">
+                        <h3>Basics of Digital Forensics</h3>
+                        <span class="cert-issuer">Digital Forensics Track</span>
+                        <p>Learned foundational concepts of digital forensics, evidence acquisition, analysis
+                            methodologies, and tracking digital artifacts securely.</p>
+                    </div>
+                    <div class="cert-links">
+                        <a href="https://drive.google.com/file/d/1sVD4DI8TuptsjJQtjcpB-zmZTe0M82iq/view?usp=drive_link"
+                            class="cert-link-btn" style="flex: 1;"><i class="fas fa-external-link-alt"></i> View
+                            Certificate</a>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <span class="cert-badge gold-badge">Professional Credential</span>
+                        <div class="cert-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    </div>
+                    <div class="cert-body">
+                        <h3>Certified Cybersecurity Educator Professional (CCEP)</h3>
+                        <span class="cert-issuer">Cybersecurity Education</span>
+                        <p>Earned professional certification in cybersecurity education and instructional leadership,
+                            validating technical communication and training delivery.</p>
+                    </div>
+                    <div class="cert-links">
+                        <a href="https://drive.google.com/file/d/11rsgz0_OzPN5lExeMYF6Ve4NkKcQT5r1/view?usp=drive_link"
+                            class="cert-link-btn gold-btn" style="flex: 1;"><i class="fas fa-certificate"></i>
+                            View Credential</a>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <span class="cert-badge gold-badge">Entrepreneurship</span>
+                        <div class="cert-icon"><i class="fas fa-lightbulb"></i></div>
+                    </div>
+                    <div class="cert-body">
+                        <h3>InnovEgypt Program</h3>
+                        <span class="cert-issuer">ITIDA & TIEC</span>
+                        <p>Completed the professional entrepreneurship and innovation training program, acquiring core
+                            concepts in business modeling, ideation, and startup creation.</p>
+                    </div>
+                    <div class="cert-links">
+                        <a href="https://drive.google.com/file/d/1EJrgiWDlynFQtiUNBtfbv_chnVYxUfNn/view?usp=sharing"
+                            class="cert-link-btn gold-btn" style="flex: 1;">
+                            View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What People Say</h2>
+            <div class="testimonials-grid">
+                <article class="testimonial-card">
+                    <div class="testimonial-card-header">
+                        <h3>Amani Habib</h3>
+                        <p class="testimonial-rating">⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <p>
+                        I had the pleasure of learning C programming under the guidance of Instructor Yehya, and I can
+                        confidently say he is one of the most knowledgeable and supportive instructors I've come across.
+                        His teaching style is clear, engaging, and well-structured, making even the most complex programming
+                        concepts easier to understand. Yehya doesn’t just teach the language—he ensures students truly
+                        grasp the logic behind it. What really sets him apart is his depth of knowledge and his willingness
+                        to go the extra mile to support his students. Whether it was answering questions, offering guidance,
+                        or simply being approachable, Yehya created a learning environment where everyone felt encouraged and
+                        motivated. I’m grateful for the solid foundation he helped me build in C programming, and I highly
+                        recommend him to anyone looking to learn from a passionate and dedicated instructor.
+                    </p>
+                </article>
+                <article class="testimonial-card">
+                    <div class="testimonial-card-header">
+                        <h3>Abdulrahman Barea</h3>
+                        <p class="testimonial-rating">⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <p>
+                        I had the privilege of working under Yehya’s leadership during our student activity, and I can
+                        confidently say he had a significant impact on my professional growth. Yehya was one of the very first
+                        people who introduced me to the fundamentals of embedded software development, and for that, I’m truly
+                        grateful. Beyond his technical expertise, Yehya demonstrated exceptional leadership and mentorship
+                        skills. He created an environment where learning was encouraged, and he always took the time to explain
+                        complex concepts in a clear and practical way. His ability to guide a team, solve problems under pressure,
+                        and maintain a positive, collaborative atmosphere made a huge difference in our success. I highly
+                        recommend Yehya for any role that requires strong technical knowledge, leadership, and a genuine passion
+                        for helping others grow.
+                    </p>
+                </article>
+                <article class="testimonial-card">
+                    <div class="testimonial-card-header">
+                        <h3>Yasmine</h3>
+                        <p class="testimonial-rating">⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <p>
+                        I had the chance to learn from Yehya Hamdy. His way of explaining was always smooth and clear, which
+                        made even difficult topics easy to understand. He constantly supported and motivated us during the learning
+                        process, and I truly appreciate his efforts. I highly recommend him.
+                    </p>
+                </article>
+                <article class="testimonial-card">
+                    <div class="testimonial-card-header">
+                        <h3>Mohammed Abdelhalem</h3>
+                        <p class="testimonial-rating">⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <p>
+                        I learned many skills from Yehya within programming, presentation, teamwork and many other things by
+                        working with him in the SCU Dashboard team.
+                    </p>
+                </article>
+                <article class="testimonial-card">
+                    <div class="testimonial-card-header">
+                        <h3>Atallah Mahmoud</h3>
+                        <p class="testimonial-rating">⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <p>
+                        I had the pleasure of working under the leadership of Yehia Hamdy in our Racing Team. He is a great
+                        leader who knows how to guide the team, organize tasks, and motivate everyone to achieve the best results.
+                        Yehia is highly supportive, skilled, and always inspires the people around him.
+                    </p>
+                </article>
+                <article class="testimonial-card">
+                    <div class="testimonial-card-header">
+                        <h3>Omar Mohammed Eid</h3>
+                        <p class="testimonial-rating">⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <p>
+                        An excellent explaining supported with great examples made it easy to understand the commands and when to
+                        use them. Also the learning process was assisted with some practical labs to make sure I was able to use the
+                        commands correctly and memorize them better.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-grid">
+
+                <!-- Left side: Technical contact and network information -->
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p>Have an exciting opportunity, a technical project, or just want to discuss cybersecurity and
+                        networking? Drop a message or find me on my technical channels!</p>
+
+                    <div class="contact-details">
+                        <p><i class="fa-solid fa-envelope"></i> yehya.hamdy1111@gmail.com</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Ismailia, Egypt</p>
+                    </div>
+
+                    <!-- Accounts Icons -->
+                    <div class="tech-socials">
+                        <h4>Technical Channels (#Code)</h4>
+                        <div class="social-icons-wrapper">
+                            <!-- Linkedin -->
+                            <a href="https://linkedin.com/in/yehya-shehata" target="_blank" class="social-btn linkedin"
+                                title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <!-- Youtube Channel: Code_201 -->
+                            <a href="https://www.youtube.com/@Code_201" target="_blank" class="social-btn youtube"
+                                title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            <!-- TikTok Channel: @yehyahamdyshehata -->
+                            <a href="https://www.tiktok.com/@yehyahamdyshehata" target="_blank"
+                                class="social-btn tiktok" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                            <!-- Instagram: @yehyahamdyshehata -->
+                            <a href="https://www.instagram.com/yehyahamdyshehata" target="_blank"
+                                class="social-btn instagram" title="Instagram"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <!-- Facebook Page -->
+                            <a href="https://web.facebook.com/profile.php?id=61562286009636" target="_blank"
+                                class="social-btn facebook" title="Facebook Page"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side: Active Mailbox -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                    <input type="hidden" name="access_key" value="7c557bcc-97c2-4cda-9eb0-385c6c75dd94">
+
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Yehya Hamdy Shehata. All Rights Reserved.</p>
+            <p class="console-tip">Tip: Open your browser console (F12) for a hidden message.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
