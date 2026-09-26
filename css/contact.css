@@ -1,0 +1,285 @@
+/* Start Contact Section */
+.contact {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--color-surface);
+}
+
+.contact .contact-cols {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.contact .contact-cols>.text,
+.contact .contact-cols>.contact-content {
+    flex: 1;
+}
+
+.contact .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact .contact-form .form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.contact .contact-form .form-row .form-group {
+    flex: 1;
+}
+
+.contact .contact-form .form-group {
+    width: 100%;
+}
+
+.contact .contact-form input,
+.contact .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgba(139, 187, 146, 0.3);
+    border-radius: 6px;
+    outline: none;
+    background-color: var(--color-bg);
+    color: var(--color-white);
+    font-family: inherit;
+    font-size: 15px;
+    transition-duration: var(--transition-duration);
+}
+
+.contact .contact-form input {
+    height: 50px;
+}
+
+.contact .contact-form textarea {
+    min-height: 180px;
+    resize: none;
+}
+
+.contact .contact-form input::placeholder,
+.contact .contact-form textarea::placeholder {
+    color: var(--color-text-muted);
+}
+
+.contact .contact-form input:focus,
+.contact .contact-form textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(42, 131, 95, 0.12);
+}
+
+.contact .contact-form button {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border: 2px solid var(--color-primary);
+    border-radius: 6px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    transition-duration: var(--transition-duration);
+}
+
+.contact .contact-form button i {
+    transition-duration: var(--transition-duration);
+}
+
+.contact .contact-form button:hover {
+    background-color: transparent;
+    color: var(--color-accent);
+}
+
+.contact .contact-form button:hover i {
+    transform: translateX(5px);
+}
+
+.contact .contact-form .form-group {
+    position: relative;
+}
+
+.contact .contact-form .error-message {
+    display: block;
+    min-height: 18px;
+    margin-top: 5px;
+    color: #ff6b6b;
+    font-size: 12px;
+}
+
+.contact .contact-form input.invalid,
+.contact .contact-form textarea.invalid {
+    border-color: #ff6b6b;
+}
+
+.contact .contact-form input.valid,
+.contact .contact-form textarea.valid {
+    border-color: var(--color-primary);
+}
+
+.contact .contact-form .honeypot {
+    display: none;
+}
+
+.contact .contact-form .form-status {
+    min-height: 20px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.contact .contact-form .form-status.success {
+    color: var(--color-accent);
+}
+
+.contact .contact-form .form-status.error {
+    color: #ff6b6b;
+}
+
+@media (max-width: 991px) {
+    .contact .contact-cols {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact .contact-form .form-row {
+        flex-direction: column;
+    }
+
+    .contact .contact-form button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.contact .contact-cols > .text {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact .contact-cols > .text h3 {
+    color: var(--color-white);
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.contact .contact-cols > .text > p {
+    color: var(--color-text-muted);
+    font-size: 16px;
+    line-height: var(--line-height);
+    max-width: 500px;
+}
+
+.contact .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact .contact-info div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact .contact-info div i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    font-size: 17px;
+}
+
+.contact .contact-info div span {
+    color: var(--color-text-muted);
+    font-size: 15px;
+}
+
+.contact .technical-channels {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact .technical-channels h4 {
+    color: var(--color-white);
+    font-size: 18px;
+}
+
+.contact .technical-channels > div {
+    display: flex;
+    gap: 12px;
+}
+
+.contact .technical-channels a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--color-primary);
+    border-radius: 6px;
+    color: var(--color-accent);
+    transition-duration: var(--transition-duration);
+}
+
+.contact .technical-channels a:hover {
+    color: var(--color-white);
+    transform: translateY(-3px);
+}
+
+.contact .technical-channels a:nth-child(1):hover {
+    background-color: #0A66C2;
+    border-color: #0A66C2;
+}
+
+.contact .technical-channels a:nth-child(2):hover {
+    background-color: #333333;
+    border-color: #333333;
+}
+
+.contact .technical-channels a:nth-child(3):hover {
+    background-color: #FF0000;
+    border-color: #FF0000;
+}
+
+.contact .cv-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contact .cv-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border: 1px solid var(--color-primary);
+    border-radius: 6px;
+    color: var(--color-accent);
+    font-size: 13px;
+    transition-duration: var(--transition-duration);
+}
+
+.contact .cv-links a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.contact .cv-links a i {
+    transition-duration: var(--transition-duration);
+}
+
+.contact .cv-links a:hover i {
+    transform: translate(2px, -2px);
+}
+/* End Contact Section */

@@ -1,0 +1,248 @@
+/* Start Hero Section */
+.hero {
+    padding-top: var(--main-padding-top);
+    background-color: var(--color-bg);
+    overflow: hidden;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+@media (max-width: 767px) {
+    .hero {
+        padding-bottom: 50px;
+    }
+    .hero .container {
+        flex-direction: column-reverse;
+    }
+}
+
+.hero .container .content {
+    flex: 1;
+}
+
+.hero .container .content .greeting {
+    color: var(--color-text-muted);
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.hero .container .content h1 {
+    position: relative;
+    color: var(--color-white);
+    font-size: 50px;
+}
+
+@media (max-width: 767px) {
+    .hero .container .content h1 {
+        font-size: 32px;
+    }
+}
+
+.hero .container .content h1::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: -10px;
+    width: 40%;
+    background-color: var(--color-primary);
+}
+
+.hero .container .content p:nth-of-type(2) {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--color-surface);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+    background-color: var(--color-white);
+    border-radius: 50px;
+    width: fit-content;
+    padding: 5px 10px; 
+}
+
+@media (max-width: 767px) {
+    .hero .container .content p:nth-of-type(2) {
+        font-size: 13px;
+    }
+}
+
+.hero .container .content h3 {
+    position: relative;
+    color: var(--color-white);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.hero .container .content h3 span {
+    color: var(--color-primary);
+    font-size: 18px;
+    font-weight: 900;
+    margin: 0 10px;
+}
+
+.hero .container .content h3:last-of-type::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: -10px;
+    width: 40%;
+    background-color: var(--color-primary);
+}
+
+.hero .container .content p:last-of-type {
+    margin-top: 25px;
+    color: var(--color-text-muted);
+    font-size: 18px;
+    line-height: var(--line-height);
+}
+
+.hero .container .content .hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.hero .container .content .hero-buttons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 130px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    transition-duration: var(--transition-duration);
+}
+
+.hero .container .content .hero-buttons a:first-child {
+    color: var(--color-white);
+    background: linear-gradient(to right, var(--color-accent) 50%, var(--color-primary) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    .hero .container .content .hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.hero .container .content .hero-buttons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 130px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    transition-duration: var(--transition-duration);
+}
+
+.hero .container .content .hero-buttons a:first-child {
+    color: var(--color-white);
+    background: linear-gradient(to right, var(--color-accent) 50%, var(--color-primary) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.hero .container .content .hero-buttons a:first-child:hover {
+    background-position: left bottom;
+    color: var(--color-bg);
+}
+
+.hero .container .content .hero-buttons a:last-child {
+    color: var(--color-white);
+    background: linear-gradient(to right, var(--color-accent) 50%, var(--color-bg) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    border: 1px solid var(--color-primary);
+}
+
+.hero .container .content .hero-buttons a:last-child:hover {
+    background-position: left bottom;
+    color: var(--color-bg);
+}
+}
+
+.hero .container .content .hero-buttons a:first-child:hover {
+    background-position: left bottom;
+    color: var(--color-bg);
+}
+
+.hero .container .content .hero-buttons a:last-child {
+    color: var(--color-white);
+    background: linear-gradient(to right, var(--color-accent) 50%, var(--color-bg) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    border: 1px solid var(--color-primary);
+}
+
+.hero .container .content .hero-buttons a:last-child:hover {
+    background-position: left bottom;
+    color: var(--color-bg);
+}
+
+.hero .container .content .availability {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    color: var(--color-accent);
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.hero .container .content .availability span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    box-shadow: 0 0 10px var(--color-accent);
+    animation: pulse-dot 1.8s ease-in-out infinite;
+}
+
+.hero .container .image {
+    flex: 1;
+}
+
+.hero .container .image img {
+    display: block;
+    max-width: 100%;
+    filter: drop-shadow(0 0 25px rgba(42, 131, 95, 0.35));
+    animation: float 4s ease-in-out infinite;
+}
+/* End Hero Section */
+
+/* Start Animation Section */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse-dot {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0 8px var(--color-accent);
+    }
+    50% {
+        transform: scale(1.35);
+        opacity: 0.65;
+        box-shadow: 0 0 14px var(--color-accent);
+    }
+}
+/* End Animation Section */

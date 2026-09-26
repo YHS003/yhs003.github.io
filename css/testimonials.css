@@ -1,0 +1,93 @@
+/* Start Testimonials Section */
+.testimonials {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--color-bg);
+}
+
+.testimonials .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.testimonials .testimonial-card {
+    background-color: var(--color-surface);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 
+        transform var(--transition-duration) ease,
+        border-color var(--transition-duration) ease,
+        box-shadow var(--transition-duration) ease;
+}
+
+.testimonials .testimonial-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-primary);
+    box-shadow: 0 15px 30px rgba(42, 131, 95, 0.2);
+}
+
+.testimonials .testimonial-card .testimonial-header .testimonial-person h3 {
+    color: var(--color-white);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.testimonials .testimonial-card .testimonial-header .testimonial-person p {
+    color: var(--color-accent);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.testimonials .testimonial-card .testimonial-header > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    color: var(--color-accent);
+    transition-duration: var(--transition-duration);
+}
+
+.testimonials .testimonial-card .testimonial-header > a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.testimonials .testimonial-card .testimonial-header > a i {
+    font-size: 18px;
+}
+
+.testimonials .testimonial-card .testimonial-header .testimonial-person .testimonial-avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    right: -15px;
+    top: -50px;
+    border: 10px solid var(--color-bg);
+}
+
+.testimonial-card .testimonial-content {
+    position: relative;
+}
+
+.testimonial-card .testimonial-content > i {
+    display: block;
+    color: var(--color-primary);
+    font-size: 28px;
+}
+
+.testimonial-card .testimonial-content p {
+    color: var(--color-text-muted);
+    font-size: 15px;
+    line-height: var(--line-height);
+    padding: 10px 20px;
+}
+/* End Testimonials Section */

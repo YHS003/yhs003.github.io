@@ -1,0 +1,115 @@
+/* Start About Section */
+.about {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--color-surface);
+}
+
+.about .container .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+@media (max-width: 767px) {
+    .about .container .about-content {
+        flex-direction: column;
+    }
+}
+
+.about .container .about-content .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.about .container .about-content .content p {
+    color: var(--color-white);
+    font-size: 18px;
+    line-height: var(--line-height);
+}
+
+.about .about-content .content blockquote {
+    color: var(--color-text-muted);
+    font-size: 16px;
+    line-height: var(--line-height);
+    padding-left: 20px;
+    border-left: 3px solid var(--color-primary);
+    font-style: italic;
+}
+
+.about .container .about-content .cards {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.about .container .about-content .cards .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    background-color: var(--color-bg);
+    padding: 50px;
+    border: 2px solid rgba(139, 187, 146, 0.15);
+    border-radius: 10px;
+    transition-duration: var(--transition-duration);
+    position: relative;
+    overflow: hidden;
+}
+
+.about .container .about-content .cards .card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(42, 131, 95, 0.12);
+    transform: translate(-50%, -50%);
+    transition-duration: var(--transition-duration);
+}
+
+@media (max-width: 767px) {
+    .about .container .about-content .cards .card::before {
+        border-radius: 10px;
+    }
+}
+
+.about .container .about-content .cards .card:hover::before {
+    width: 150%;
+    height: 150%;
+}
+
+.about .container .about-content .cards .card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 25px rgba(42, 131, 95, 0.2);
+}
+
+.about .container .about-content .cards .card i {
+    color: var(--color-primary);
+    font-size: 28px;
+    transition-duration: var(--transition-duration);
+}
+
+.about .container .about-content .cards .card:hover i {
+    transform: scale(1.15); 
+}
+
+.about .container .about-content .cards .card h3 {
+    color: var(--color-white);
+    font-size: 30px;
+}
+
+.about .container .about-content .cards .card p {
+    color: var(--color-text-muted);
+    font-size: 15px;
+}
+/* End About Section */

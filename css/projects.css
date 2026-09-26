@@ -1,0 +1,337 @@
+/* Start Projects Section */
+.projects {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--color-surface);
+}
+
+.projects .projects-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.projects .projects-filter button {
+    position: relative;
+    padding: 10px 22px;
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    background-color: transparent;
+    color: var(--color-text-muted);
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition-duration: var(--transition-duration);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.projects .projects-filter button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+    transition-duration: var(--transition-duration);
+    z-index: -1;
+}
+
+.projects .projects-filter button:hover::before,
+.projects .projects-filter button.active::before {
+    left: 0;
+}
+
+.projects .projects-filter button:hover,
+.projects .projects-filter button.active {
+    color: var(--color-white);
+}
+
+.projects .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.projects .projects-grid.filtering {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.projects .project-card {
+    perspective: 1000px;
+    background-color: var(--color-bg);
+    border-radius: 10px;
+    border: 2px solid rgba(139, 187, 146, 0.15);
+}
+
+.projects .project-card {
+    transition: transform var(--transition-duration) ease,
+        border-color var(--transition-duration) ease,
+        box-shadow var(--transition-duration) ease;
+}
+
+.projects .project-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-primary);
+    box-shadow: 0 15px 30px rgba(42, 131, 95, 0.2);
+}
+
+.projects .project-card-inner {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    transform-style: preserve-3d;
+    transition-duration: var(--transition-duration);
+}
+
+.projects .project-card-front,
+.projects .project-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.projects .project-card-back {
+    transform: rotateY(180deg);
+}
+
+.projects .project-card.flipped .project-card-inner {
+    transform: rotateY(180deg);
+}
+
+.projects .project-card-front {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg);
+    padding: 10px;
+}
+
+.projects .project-card-front img {
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.projects .project-card-front .project-overlay {
+    padding: 20px;
+    text-align: center;
+}
+
+.projects .project-card-front .project-overlay h3 {
+    color: var(--color-white);
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.projects .project-card-front .project-overlay p {
+    color: var(--color-text-muted);
+    font-size: 14px;
+    line-height: var(--line-height);
+}
+
+.projects .project-card-front .project-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.projects .project-card-front .project-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-accent);
+    font-size: 13px;
+}
+
+.projects .project-card-front .project-type i {
+    color: var(--color-primary);
+    font-size: 18px;
+}
+
+.projects .project-card-front .project-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.projects .project-card-front .project-track i {
+    color: var(--color-primary);
+    font-size: 18px;
+    margin-right: 2px;
+}
+
+.projects .project-card-front .project-track span {
+    padding: 4px 9px;
+    border: 1px solid rgba(139, 187, 146, 0.4);
+    border-radius: 15px;
+    color: var(--color-text-muted);
+    font-size: 11px;
+    transition: 
+        background-color var(--transition-duration) ease,
+        color var(--transition-duration) ease,
+        border-color var(--transition-duration) ease;
+}
+
+.projects .project-card:hover .project-track .track span {
+    border-color: var(--color-primary);
+    color: var(--color-accent);
+}
+
+.projects .project-card-front .flip-btn {
+    align-self: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: 6px;
+    background-color: transparent;
+    color: var(--color-accent);
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    transition-duration: var(--transition-duration);
+    margin-top: auto;
+}
+
+.projects .project-card-front .flip-btn i {
+    margin-left: 8px;
+    transition-duration: var(--transition-duration);
+}
+
+.projects .project-card-front .flip-btn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.projects .project-card-front .flip-btn:hover i {
+    transform: translateX(5px);
+}
+
+.projects .project-card-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    background-color: var(--color-bg);
+    text-align: center;
+}
+
+.projects .project-card-back h3 {
+    color: var(--color-white);
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.projects .project-card-back>p {
+    color: var(--color-text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.projects .project-card-back .project-contribution {
+    width: 100%;
+    padding: 12px 15px;
+    border-left: 3px solid var(--color-primary);
+    background-color: var(--color-surface);
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.projects .project-card-back .project-contribution h4 {
+    color: var(--color-accent);
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.projects .project-card-back .project-contribution p {
+    color: var(--color-text-muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.projects .project-card-back .project-tech {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 15px;
+}
+
+.projects .project-card-back .project-tech span {
+    padding: 4px 9px;
+    border: 1px solid var(--color-primary);
+    border-radius: 15px;
+    color: var(--color-accent);
+    font-size: 11px;
+}
+
+.projects .project-card-back .project-links {
+    display: flex;
+    gap: 10px;
+    margin-bottom: auto;
+}
+
+.projects .project-card-back .project-links a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 12px;
+    border: 1px solid var(--color-primary);
+    border-radius: 6px;
+    color: var(--color-accent);
+    font-size: 13px;
+    transition-duration: var(--transition-duration);
+}
+
+.projects .project-card-back .project-links a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.projects .project-card-back .back-btn {
+    margin-top: 15px;
+}
+
+.projects .project-card-back .flip-btn {
+    padding: 10px 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: 6px;
+    background-color: transparent;
+    color: var(--color-accent);
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    transition-duration: var(--transition-duration);
+}
+
+.projects .project-card-back .flip-btn i {
+    margin-right: 8px;
+    transition-duration: var(--transition-duration);
+}
+
+.projects .project-card-back .flip-btn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.projects .project-card-back .flip-btn:hover i {
+    transform: translateX(-5px);
+}
+/* End Projects Section */
