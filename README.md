@@ -6,7 +6,7 @@ Built from scratch using **HTML, CSS, and JavaScript**, with a focus on responsi
 
 ## 🌐 Live Demo
 
-[View Portfolio](https://yhs003.github.io/portfolio/)
+[View Portfolio](https://yhs003.github.io/)
 
 ## 👋 About
 
