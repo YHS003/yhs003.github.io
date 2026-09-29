@@ -120,10 +120,9 @@
 }
 
 .contact .contact-form .form-status {
-    min-height: 20px;
     margin: 0;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: var(--line-height);
 }
 
 .contact .contact-cols > .text {
