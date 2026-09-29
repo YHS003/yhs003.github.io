@@ -139,7 +139,6 @@ projectCards.forEach(function(card) {
 /* End Projects Section */
 
 /* Start Contact Section */
-
 let contactForm = document.querySelector('.contact-form');
 
 let firstName = contactForm.querySelector('[name="first-name"]');
@@ -149,168 +148,97 @@ let subject = contactForm.querySelector('[name="subject"]');
 let email = contactForm.querySelector('[name="email"]');
 let message = contactForm.querySelector('[name="message"]');
 
+let formStatus = contactForm.querySelector('.form-status');
+
 function showError(input, messageText) {
-
     let error = input.parentElement.querySelector('.error-message');
-
     input.classList.add('invalid');
     input.classList.remove('valid');
-
     error.textContent = messageText;
-
 }
 
 function showSuccess(input) {
-
     let error = input.parentElement.querySelector('.error-message');
-
     input.classList.remove('invalid');
     input.classList.add('valid');
-
     error.textContent = '';
-
 }
 
 function validateName(input) {
-
     let value = input.value.trim();
-
     if (value === '') {
-
         showError(input, 'This field is required.');
-
         return false;
-
     }
-
     if (value.length < 2) {
-
         showError(input, 'Please enter at least 2 characters.');
-
         return false;
-
     }
-
     if (!/^[a-zA-ZÀ-ÿ\s'-]+$/.test(value)) {
-
         showError(input, 'Please enter a valid name.');
-
         return false;
-
     }
-
     showSuccess(input);
-
     return true;
-
 }
 
 function validatePhone(input) {
-
     let value = input.value.trim();
-
     if (value === '') {
-
         showError(input, 'Phone number is required.');
-
         return false;
-
     }
-
     if (!/^\+?[0-9\s()-]{7,20}$/.test(value)) {
-
         showError(input, 'Please enter a valid phone number.');
-
         return false;
-
     }
-
     showSuccess(input);
-
     return true;
-
 }
 
 function validateSubject(input) {
-
     let value = input.value.trim();
-
     if (value === '') {
-
         showError(input, 'Subject is required.');
-
         return false;
-
     }
-
     if (value.length < 3) {
-
         showError(input, 'Subject is too short.');
-
         return false;
-
     }
-
     showSuccess(input);
-
     return true;
-
 }
 
 function validateEmail(input) {
-
     let value = input.value.trim();
-
     if (value === '') {
-
         showError(input, 'Email is required.');
-
         return false;
-
     }
-
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-
         showError(input, 'Please enter a valid email address.');
-
         return false;
-
     }
-
     showSuccess(input);
-
     return true;
-
 }
 
 function validateMessage(input) {
-
     let value = input.value.trim();
-
     if (value === '') {
-
         showError(input, 'Message is required.');
-
         return false;
-
     }
-
     if (value.length < 10) {
-
         showError(input, 'Message is too short.');
-
         return false;
-
     }
-
     showSuccess(input);
-
     return true;
-
 }
 
 contactForm.addEventListener('submit', function(event) {
-
     let firstNameValid = validateName(firstName);
     let lastNameValid = validateName(lastName);
     let phoneValid = validatePhone(phone);
@@ -326,11 +254,8 @@ contactForm.addEventListener('submit', function(event) {
         !emailValid ||
         !messageValid
     ) {
-
         event.preventDefault();
-
+        return;
     }
-
 });
-
 /* End Contact Section */
