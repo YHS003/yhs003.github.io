@@ -1355,7 +1355,6 @@
                 <div class="contact-content">
                     <form id="contact-form" class="contact-form" action="https://formspree.io/f/mzezoggp" method="POST">
                         <input type="hidden" name="_subject" value="New Portfolio Contact">
-                        <input type="hidden" name="_template" value="table">
                         <div class="form-row">
                             <div class="form-group">
                                 <input type="text" name="first-name" placeholder="First Name" maxlength="30"
@@ -1393,10 +1392,7 @@
                             Send Message
                             <i class="fa-solid fa-paper-plane"></i>
                         </button>
-                        <p class="form-status" data-fs-success>
-                            Message sent successfully!
-                        </p>
-                        <p class="form-status error" data-fs-error></p>
+                        <p class="form-status"></p>
                     </form>
                 </div>
             </div>
@@ -1439,19 +1435,6 @@
 
     <!-- Start JavaScript Files Section -->
     <script src="./JavaScript/main.js"></script>
-
-    <script>
-        window.formspree = window.formspree || function () {
-            (formspree.q = formspree.q || []).push(arguments);
-        };
-
-        formspree('initForm', {
-            formElement: '#contact-form',
-            formId: 'mzezoggp'
-        });
-    </script>
-
-    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
     <!-- End JavaScript Files Section -->
 </body>
 

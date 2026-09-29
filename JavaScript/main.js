@@ -21,16 +21,16 @@ logo.addEventListener("click", function () {
 let btnNav = document.querySelector('.menu-toggle');
 let nav = document.querySelector('nav');
 
-btnNav.addEventListener(('click'), function () {
+btnNav.addEventListener('click', function () {
     nav.classList.toggle("show");
 });
 
 let sections = document.querySelectorAll('div[id]');
-let observer = new IntersectionObserver(function(entries) {
+let observer = new IntersectionObserver(function (entries) {
 
-    entries.forEach(function(entry) {
+    entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-            links.forEach(function(link) {
+            links.forEach(function (link) {
                 link.classList.remove("active");
             });
             let activeLink = document.querySelector(
@@ -45,7 +45,7 @@ let observer = new IntersectionObserver(function(entries) {
     threshold: 0.3
 });
 
-sections.forEach(function(section) {
+sections.forEach(function (section) {
     observer.observe(section);
 });
 /* End Header Section */
@@ -55,10 +55,10 @@ let skillButtons = document.querySelectorAll('.skills-filter button');
 let skillCards = document.querySelectorAll('.skill-card');
 let skillsGrid = document.querySelector('.skills-grid');
 
-skillButtons.forEach(function(button) {
+skillButtons.forEach(function (button) {
 
-    button.addEventListener('click', function() {
-        skillButtons.forEach(function(button) {
+    button.addEventListener('click', function () {
+        skillButtons.forEach(function (button) {
             button.classList.remove('active');
         });
         this.classList.add('active');
@@ -66,8 +66,8 @@ skillButtons.forEach(function(button) {
         let category = this.dataset.category;
 
         skillsGrid.classList.add('filtering');
-        setTimeout(function() {
-            skillCards.forEach(function(card) {
+        setTimeout(function () {
+            skillCards.forEach(function (card) {
                 if (card.dataset.category === category) {
                     card.style.display = 'flex';
                 } else {
@@ -78,7 +78,7 @@ skillButtons.forEach(function(button) {
         }, 300);
     });
 });
-skillCards.forEach(function(card) {
+skillCards.forEach(function (card) {
     if (card.dataset.category === "frontend") {
         card.style.display = "flex";
     } else {
@@ -90,8 +90,8 @@ skillCards.forEach(function(card) {
 /* Start Projects Section */
 let flipButtons = document.querySelectorAll('.flip-btn');
 
-flipButtons.forEach(function(button) {
-    button.addEventListener('click', function(event) {
+flipButtons.forEach(function (button) {
+    button.addEventListener('click', function (event) {
         event.stopPropagation();
 
         let card = button.closest('.project-card');
@@ -104,9 +104,9 @@ let projectFilterButtons = document.querySelectorAll('.projects-filter button');
 let projectCards = document.querySelectorAll('.project-card');
 let projectsGrid = document.querySelector('.projects-grid');
 
-projectFilterButtons.forEach(function(button) {
-    button.addEventListener('click', function() {
-        projectFilterButtons.forEach(function(button) {
+projectFilterButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+        projectFilterButtons.forEach(function (button) {
             button.classList.remove('active');
         });
 
@@ -116,8 +116,8 @@ projectFilterButtons.forEach(function(button) {
 
         let category = this.dataset.category;
 
-        setTimeout(function() {
-            projectCards.forEach(function(card) {
+        setTimeout(function () {
+            projectCards.forEach(function (card) {
                 if (card.dataset.category === category) {
                     card.style.display = 'block';
                 } else {
@@ -129,7 +129,7 @@ projectFilterButtons.forEach(function(button) {
     });
 });
 
-projectCards.forEach(function(card) {
+projectCards.forEach(function (card) {
     if (card.dataset.category === 'frontend') {
         card.style.display = 'block';
     } else {
@@ -155,6 +155,7 @@ function showError(input, messageText) {
     input.classList.add('invalid');
     input.classList.remove('valid');
     error.textContent = messageText;
+    error.style.display = 'block';
 }
 
 function showSuccess(input) {
@@ -162,6 +163,7 @@ function showSuccess(input) {
     input.classList.remove('invalid');
     input.classList.add('valid');
     error.textContent = '';
+    error.style.display = 'none';
 }
 
 function validateName(input) {
@@ -238,7 +240,9 @@ function validateMessage(input) {
     return true;
 }
 
-contactForm.addEventListener('submit', function(event) {
+contactForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    formStatus.style.display = 'none';
     let firstNameValid = validateName(firstName);
     let lastNameValid = validateName(lastName);
     let phoneValid = validatePhone(phone);
@@ -254,7 +258,31 @@ contactForm.addEventListener('submit', function(event) {
         !emailValid ||
         !messageValid
     ) {
-        event.preventDefault();
+        return;
     }
+
+    fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+        .then(function (response) {
+            if (response.ok) {
+                formStatus.textContent = 'Message sent successfully!';
+                formStatus.style.display = 'block';
+                formStatus.style.color = 'var(--color-accent)';
+            } else {
+                formStatus.textContent = 'Something went wrong. Please try again.';
+                formStatus.style.display = 'block';
+                formStatus.style.color = '#ff6b6b';
+            }
+        })
+        .catch(function () {
+            formStatus.textContent = 'Something went wrong. Please try again.';
+            formStatus.style.display = 'block';
+            formStatus.style.color = '#ff6b6b';
+        });
 });
 /* End Contact Section */

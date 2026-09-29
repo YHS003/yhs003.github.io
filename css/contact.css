@@ -11,30 +11,20 @@
     gap: 50px;
 }
 
-.contact .contact-cols>.text,
-.contact .contact-cols>.contact-content {
+.contact .contact-cols > .text,
+.contact .contact-cols > .contact-content {
     flex: 1;
 }
 
 .contact .contact-form {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 .contact .contact-form .form-row {
     display: flex;
     gap: 20px;
-}
-
-@media (max-width: 767px) {
-    .contact .contact-form .form-row {
-        gap: 0;
-    }
-
-    .contact .contact-form button {
-        width: 100%;
-        justify-content: center;
-    }
 }
 
 .contact .contact-form .form-row .form-group {
@@ -79,6 +69,27 @@
     box-shadow: 0 0 0 3px rgba(42, 131, 95, 0.12);
 }
 
+.contact .contact-form .error-message {
+    display: none;
+    margin-top: 5px;
+    color: #ff6b6b;
+    font-size: 12px;
+}
+
+.contact .contact-form input.invalid,
+.contact .contact-form textarea.invalid {
+    border-color: #ff6b6b;
+}
+
+.contact .contact-form input.valid,
+.contact .contact-form textarea.valid {
+    border-color: var(--color-primary);
+}
+
+.contact .contact-form .honeypot {
+    display: none;
+}
+
 .contact .contact-form button {
     align-self: flex-start;
     display: flex;
@@ -108,62 +119,11 @@
     transform: translateX(5px);
 }
 
-.contact .contact-form .form-group {
-    position: relative;
-}
-
-.contact .contact-form .error-message {
-    display: block;
-    min-height: 18px;
-    margin-top: 5px;
-    color: #ff6b6b;
-    font-size: 12px;
-}
-
-.contact .contact-form input.invalid,
-.contact .contact-form textarea.invalid {
-    border-color: #ff6b6b;
-}
-
-.contact .contact-form input.valid,
-.contact .contact-form textarea.valid {
-    border-color: var(--color-primary);
-}
-
-.contact .contact-form .honeypot {
-    display: none;
-}
-
 .contact .contact-form .form-status {
     min-height: 20px;
     margin: 0;
     font-size: 14px;
     line-height: 1.5;
-}
-
-.contact .contact-form .form-status.success {
-    color: var(--color-accent);
-}
-
-.contact .contact-form .form-status.error {
-    color: #ff6b6b;
-}
-
-@media (max-width: 991px) {
-    .contact .contact-cols {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 767px) {
-    .contact .contact-form .form-row {
-        flex-direction: column;
-    }
-
-    .contact .contact-form button {
-        width: 100%;
-        justify-content: center;
-    }
 }
 
 .contact .contact-cols > .text {
@@ -301,5 +261,25 @@
 
 .contact .cv-links a:hover i {
     transform: translate(2px, -2px);
+}
+
+@media (max-width: 991px) {
+    .contact .contact-cols {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact .contact-form {
+        gap: 10px;
+    }
+    .contact .contact-form .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contact .contact-form button {
+        width: 100%;
+        justify-content: center;
+    }
 }
 /* End Contact Section */
