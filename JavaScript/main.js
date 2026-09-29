@@ -139,6 +139,7 @@ projectCards.forEach(function(card) {
 /* End Projects Section */
 
 /* Start Contact Section */
+
 let contactForm = document.querySelector('.contact-form');
 
 let firstName = contactForm.querySelector('[name="first-name"]');
@@ -146,91 +147,142 @@ let lastName = contactForm.querySelector('[name="last-name"]');
 let phone = contactForm.querySelector('[name="phone"]');
 let subject = contactForm.querySelector('[name="subject"]');
 let message = contactForm.querySelector('[name="message"]');
-let formStatus = contactForm.querySelector('.form-status');
 
 function showError(input, messageText) {
+
     let error = input.parentElement.querySelector('.error-message');
 
     input.classList.add('invalid');
     input.classList.remove('valid');
 
     error.textContent = messageText;
+
 }
 
 function showSuccess(input) {
+
     let error = input.parentElement.querySelector('.error-message');
 
     input.classList.remove('invalid');
     input.classList.add('valid');
+
     error.textContent = '';
+
 }
 
 function validateName(input) {
+
     let value = input.value.trim();
 
     if (value === '') {
+
         showError(input, 'This field is required.');
+
         return false;
+
     }
+
     if (value.length < 2) {
+
         showError(input, 'Please enter at least 2 characters.');
+
         return false;
+
     }
+
     if (!/^[a-zA-ZÀ-ÿ\s'-]+$/.test(value)) {
+
         showError(input, 'Please enter a valid name.');
+
         return false;
+
     }
+
     showSuccess(input);
+
     return true;
+
 }
 
 function validatePhone(input) {
+
     let value = input.value.trim();
 
     if (value === '') {
+
         showError(input, 'Phone number is required.');
+
         return false;
+
     }
+
     if (!/^\+?[0-9\s()-]{7,20}$/.test(value)) {
+
         showError(input, 'Please enter a valid phone number.');
+
         return false;
+
     }
+
     showSuccess(input);
+
     return true;
+
 }
 
 function validateSubject(input) {
+
     let value = input.value.trim();
 
     if (value === '') {
+
         showError(input, 'Subject is required.');
+
         return false;
+
     }
+
     if (value.length < 3) {
+
         showError(input, 'Subject is too short.');
+
         return false;
+
     }
+
     showSuccess(input);
+
     return true;
+
 }
 
 function validateMessage(input) {
+
     let value = input.value.trim();
 
     if (value === '') {
+
         showError(input, 'Message is required.');
+
         return false;
+
     }
+
     if (value.length < 10) {
+
         showError(input, 'Message is too short.');
+
         return false;
+
     }
+
     showSuccess(input);
+
     return true;
+
 }
 
 contactForm.addEventListener('submit', function(event) {
-    event.preventDefault();
 
     let firstNameValid = validateName(firstName);
     let lastNameValid = validateName(lastName);
@@ -245,33 +297,11 @@ contactForm.addEventListener('submit', function(event) {
         !subjectValid ||
         !messageValid
     ) {
-        return;
+
+        event.preventDefault();
+
     }
 
-    let formData = new FormData(contactForm);
-
-    fetch(contactForm.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    })
-    .then(function(response) {
-        if (response.ok) {
-            formStatus.textContent = 'Message sent successfully!';
-            formStatus.className = 'form-status success';
-            contactForm.reset();
-        } else {
-            formStatus.textContent =
-                'Something went wrong. Please try again.';
-            formStatus.className = 'form-status error';
-        }
-    })
-    .catch(function() {
-        formStatus.textContent =
-            'Something went wrong. Please try again.';
-        formStatus.className = 'form-status error';
-    });
 });
+
 /* End Contact Section */
