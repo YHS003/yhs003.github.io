@@ -255,7 +255,6 @@ contactForm.addEventListener('submit', function(event) {
         !messageValid
     ) {
         event.preventDefault();
-        return;
     }
 });
 /* End Contact Section */
