@@ -320,6 +320,16 @@ footer .footer-social a:nth-child(3):hover {
     border-color: #FF0000;
 }
 
+footer .footer-social a:nth-child(4):hover {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+footer .footer-social a:nth-child(5):hover {
+    background-color: #212C42;
+    border-color: #212C42;
+}
+
 footer p {
     color: var(--color-text-muted);
     font-size: 13px;

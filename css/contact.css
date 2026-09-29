@@ -268,6 +268,16 @@
     border-color: #FF0000;
 }
 
+.contact .technical-channels a:nth-child(4):hover {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.contact .technical-channels a:nth-child(5):hover {
+    background-color: #212C42;
+    border-color: #212C42;
+}
+
 .contact .cv-links {
     display: flex;
     flex-wrap: wrap;
